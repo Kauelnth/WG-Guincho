@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>WG Guincho Asa Delta | 24h</title>
+  <link rel="icon" type="image/png" href="logo.png">
+
+  <style>
+    :root{
+      --bg:#0b0f14;
+      --card:#111c2a;
+      --text:#ffffff;
+      --muted:#a8b3c7;
+      --orange:#f07b21;
+      --line:rgba(255,255,255,.10);
+      --radius:18px;
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background: var(--bg);
+      color: var(--text);
+      text-align:center;
+      padding:30px;
+    }
+
+    /* ===== BANNER (FOTO OCUPA TUDO) ===== */
+    .banner{
+      width:100%;
+      height:340px;
+      position:relative;
+      border-radius:18px;
+      overflow:hidden;
+      margin-bottom:30px;
+      background:url("banner.png") center 35% / cover no-repeat;
+    }
+
+    /* ESCURECE A FOTO */
+    .banner::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:rgba(0,0,0,0.55);
+    }
+
+    /* ===== LOGO + TEXTO MAIS PRA BAIXO ===== */
+    .banner-content{
+      position:absolute;
+      left:0;
+      right:0;
+      bottom:0;                 /* fixa no fundo do banner */
+      z-index:2;
+
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+
+      padding-bottom:6px;       /* controla o quão colado fica no final */
+    }
+
+    /* ===== LOGO COM TAMANHO CERTO ===== */
+    .banner-content img{
+      width:110px;               /* menor (mais bonito) */
+      height:170px;
+      border-radius:80%;
+      
+    }
+
+    .banner-content h1{
+      font-size:16px;
+      font-weight:800;
+      color:var(--orange);
+      padding:0 12px;
+      margin-bottom:10px;       /* desce a escrita junto */
+    }
+
+    /* ===== CARD PRINCIPAL ===== */
+    .container{
+      max-width:800px;
+      margin:auto;
+      background: var(--card);
+      border-radius: var(--radius);
+      padding:30px;
+      border:1px solid var(--line);
+      box-shadow:0 10px 40px rgba(0,0,0,.5);
+    }
+
+    h2{
+      font-size:30px;
+      margin-bottom:15px;
+    }
+
+    p{
+      color: var(--muted);
+      margin-bottom:25px;
+      font-size:16px;
+    }
+
+    /* ===== BOTÕES ===== */
+    .buttons{
+      display:flex;
+      justify-content:center;
+      gap:15px;
+      flex-wrap:wrap;
+      margin-bottom:30px;
+    }
+
+    .btn{
+      padding:14px 18px;
+      border-radius:14px;
+      border:none;
+      font-weight:bold;
+      cursor:pointer;
+      transition:0.2s;
+      text-decoration:none;
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+
+    .btn.orange{
+      background: var(--orange);
+      color:#000;
+    }
+
+    .btn.whatsapp{
+      background:#25d366;
+      color:#000;
+    }
+
+    .btn:hover{
+      opacity:0.85;
+    }
+
+    .btn img{
+      width:22px;
+      height:22px;
+    }
+
+    /* ===== BENEFÍCIOS ===== */
+    .features{
+      display:grid;
+      grid-template-columns:repeat(2, 1fr);
+      gap:15px;
+      margin-top:20px;
+    }
+
+    .feature{
+      padding:18px;
+      border-radius:16px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+    }
+
+    .feature h3{
+      margin-bottom:8px;
+      font-size:16px;
+      color: var(--orange);
+    }
+
+    .feature span{
+      color: var(--muted);
+      font-size:14px;
+    }
+
+    footer{
+      margin-top:30px;
+      font-size:13px;
+      color: var(--muted);
+    }
+
+    @media(max-width:600px){
+      .features{
+        grid-template-columns:1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== BANNER COM FOTO ===== -->
+  <div class="banner">
+    <div class="banner-content">
+      <img src="logo.png" alt="Logo WG Guincho Asa Delta">
+      <h1>WG GUINCHO ASA DELTA | Atendimento 24h</h1>
+    </div>
+  </div>
+
+  <!-- ===== CONTEÚDO PRINCIPAL ===== -->
+  <div class="container">
+
+    <h2>Precisa de Guincho?</h2>
+    <p>Atendimento rápido, seguro e profissional.</p>
+
+    <div class="buttons">
+      <a class="btn orange" href="tel:+5511971112263">📞 Entrar em Contato</a>
+
+      <a class="btn whatsapp"
+         href="https://wa.me/5511971112263?text=Ol%C3%A1"
+         target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+        WhatsApp
+      </a>
+    </div>
+
+    <h2>Por que chamar a gente?</h2>
+
+    <div class="features">
+      <div class="feature"><h3>⏱️ Chegada Rápida</h3><span>Agilidade total no atendimento</span></div>
+      <div class="feature"><h3>🛡️ Transporte Seguro</h3><span>Seu veículo protegido do início ao fim</span></div>
+      <div class="feature"><h3>📍 Atendimento 24h</h3><span>Qualquer hora, qualquer dia</span></div>
+      <div class="feature"><h3>🪪 Motorista Experiente</h3><span>Profissional qualificado</span></div>
+    </div>
+
+    <footer>
+      © 2026 • WG Guincho Asa Delta • Todos os direitos reservados
+    </footer>
+
+  </div>
+
+</body>
+</html>
